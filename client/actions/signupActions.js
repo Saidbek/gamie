@@ -5,3 +5,9 @@ export function userSignupRequest(userdData) {
     return axios.post('/api/users', userdData);
   }
 }
+
+export function isUserExists(identifier) {
+  return dispatch => {
+    return axios.get(`/api/users/${identifier}`);
+  }
+}
